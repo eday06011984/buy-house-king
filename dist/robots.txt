@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buy-house-king.eday06011984.chatgpt.site/sitemap.xml
