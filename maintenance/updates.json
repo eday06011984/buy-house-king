@@ -1,0 +1,22 @@
+{
+  "site_project_id": "appgprj_6aba3ede1e0881918e146efe3f2270c0",
+  "timezone": "Asia/Taipei",
+  "tracking_started": "2026-09-29",
+  "runs": [
+    {
+      "date": "2026-09-29",
+      "topic": "房貸",
+      "new_article": "/mortgage-grace-period/",
+      "published_date": "2026-09-29",
+      "changes": [
+        "新增寬限期前後月付指南",
+        "改善首頁首次買房預算段落、補上青安直接官方公告及查核日期",
+        "增加文章入口、Article/Breadcrumb、sitemap"
+      ],
+      "sources_checked_on": "2026-09-29",
+      "performance_data_available": false
+    }
+  ],
+  "review_every_runs": 7,
+  "next_coverage_review_at_tracked_run": 7
+}
