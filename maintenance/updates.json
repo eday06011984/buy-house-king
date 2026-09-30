@@ -15,6 +15,19 @@
       ],
       "sources_checked_on": "2026-09-29",
       "performance_data_available": false
+    },
+    {
+      "date": "2026-09-30",
+      "topic": "稅費",
+      "new_article": "/home-buying-taxes-fees/",
+      "published_date": "2026-09-30",
+      "changes": [
+        "新增買方契稅、印花稅、登記規費試算與交屋清單",
+        "改善房貸寬限期文章，補上稅費預備金與雙向內部連結",
+        "更新首頁文章列表、Article/Breadcrumb 與 sitemap"
+      ],
+      "sources_checked_on": "2026-09-30",
+      "performance_data_available": false
     }
   ],
   "review_every_runs": 7,
