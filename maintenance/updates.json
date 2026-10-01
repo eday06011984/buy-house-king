@@ -28,6 +28,28 @@
       ],
       "sources_checked_on": "2026-09-30",
       "performance_data_available": false
+    },
+    {
+      "date": "2026-10-01",
+      "topic": "預售屋",
+      "new_article": "/presale-contract-review-period/",
+      "published_date": "2026-10-01",
+      "changes": [
+        "新增契約審閱期、付訂前文件與留證清單，引用現行公平會原則及2026-09-23消保查核",
+        "稅費舊文補充起造人為賣方時第一次登記規費與代辦費負擔",
+        "首頁預售屋導覽改指實際指南，新增文章入口與sitemap",
+        "重新查核青安2026-08-01實施日期，保留原實質修改日"
+      ],
+      "sources_checked_on": "2026-10-01",
+      "performance_data_available": false,
+      "source_limitations": [
+        "新北市審閱期說明全文逾時，僅核對官方搜尋摘要"
+      ],
+      "source_versions": {
+        "ftc_sales_principles": "2025-12-15",
+        "moi_contract_page": "2023-07-01",
+        "cpc_inspection": "2026-09-23"
+      }
     }
   ],
   "review_every_runs": 7,
