@@ -1,0 +1,29 @@
+name: Static SEO consistency
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/static-seo-ci-*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test validator failure cases
+        run: python -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Validate repository static SEO (not deployment)
+        run: python scripts/check_static_seo.py
+      - name: Check whitespace
+        run: git show --format= --check HEAD
