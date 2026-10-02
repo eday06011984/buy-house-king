@@ -50,6 +50,25 @@
         "moi_contract_page": "2023-07-01",
         "cpc_inspection": "2026-09-23"
       }
+    },
+    {
+      "date": "2026-10-02",
+      "topic": "中古屋",
+      "new_article": "/used-house-title-age-check/",
+      "published_date": "2026-10-02",
+      "changes": [
+        "新增中古屋產權、屋齡、使用執照與實價登錄查詢清單",
+        "修正首頁中古屋主題及看屋檢查的無效錨點，改為可索引文章入口",
+        "更新首頁文章列表、Article/Breadcrumb 與 sitemap",
+        "重新查核青安3.0自2026-08-01實施，保留原實質修改日"
+      ],
+      "sources_checked_on": "2026-10-02",
+      "performance_data_available": false,
+      "source_versions": {
+        "moi_real_price_latest_batch": "2026-10-01",
+        "taipei_use_permit_page": "2026-09-30",
+        "nta_qing_an_3_0": "checked_2026-10-02"
+      }
     }
   ],
   "review_every_runs": 7,
