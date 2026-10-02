@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -26,4 +27,4 @@ jobs:
       - name: Validate repository static SEO (not deployment)
         run: python scripts/check_static_seo.py
       - name: Check whitespace
-        run: git show --format= --check HEAD
+        run: git diff --check HEAD^ HEAD
