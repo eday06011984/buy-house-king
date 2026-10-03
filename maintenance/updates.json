@@ -69,6 +69,25 @@
         "taipei_use_permit_page": "2026-09-30",
         "nta_qing_an_3_0": "checked_2026-10-02"
       }
+    },
+    {
+      "date": "2026-10-03",
+      "topic": "看屋驗屋",
+      "new_article": "/used-house-viewing-checklist/",
+      "published_date": "2026-10-03",
+      "changes": [
+        "新增中古屋看屋四階段清單，涵蓋漏水壁癌、供排水、設備、公共區域與管委會資料",
+        "實質補強中古屋產權與屋齡舊文，加入現況確認書及現場看屋的下一步",
+        "首頁看屋驗屋主題改為可索引文章入口，更新文章列表與sitemap",
+        "重新查核青安3.0自2026-08-01實施，保留原實質修改日"
+      ],
+      "sources_checked_on": "2026-10-03",
+      "performance_data_available": false,
+      "source_versions": {
+        "existing_house_contract_announcement": "2025-12-19",
+        "existing_house_contract_effective": "2026-04-01",
+        "nta_qing_an_3_0": "checked_2026-10-03"
+      }
     }
   ],
   "review_every_runs": 7,
