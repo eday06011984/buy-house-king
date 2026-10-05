@@ -109,8 +109,45 @@
         "taipei_transfer_page_reviewed": "2026-09-24",
         "nta_qing_an_3_0": "checked_2026-10-04"
       }
+    },
+    {
+      "date": "2026-10-05",
+      "topic": "房貸",
+      "new_article": "/mortgage-credit-review/",
+      "published_date": "2026-10-05",
+      "changes": [
+        "新增房貸審核與聯徵指南，區分聯徵信用評分、銀行5P授信、收入負債與擔保品鑑價",
+        "實質補強房貸寬限期舊文，加入實際核貸條件與新指南雙向內部連結",
+        "首頁房貸主題改為可索引文章入口，更新文章列表、Article/Breadcrumb與sitemap",
+        "重新查核青安3.0自2026-08-01受理及最高條件非每案核准"
+      ],
+      "sources_checked_on": "2026-10-05",
+      "performance_data_available": false,
+      "source_versions": {
+        "jcic_credit_score_page_updated": "2023-06-28",
+        "jcic_online_report_page_updated": "2025-12-23",
+        "nta_qing_an_3_0_faq_updated": "2026-07-29",
+        "nta_qing_an_3_0": "checked_2026-10-05"
+      },
+      "coverage_review": {
+        "tracked_runs_reviewed": 7,
+        "topic_counts_after_run": {
+          "首次買房": 1,
+          "房貸": 2,
+          "稅費": 1,
+          "預售屋": 1,
+          "中古屋": 1,
+          "看屋驗屋": 1
+        },
+        "findings": [
+          "六大輪替主題均已有至少一篇獨立可索引指南",
+          "房貸已分成月付壓力與申貸審核兩個不同搜尋意圖",
+          "目前沒有可取得的Search Console或真實訪客成效資料，無法判斷收錄、曝光或排名變化"
+        ],
+        "next_priority": "依輪替回到稅費，優先評估持有期間房屋稅與地價稅的買方需求"
+      }
     }
   ],
   "review_every_runs": 7,
-  "next_coverage_review_at_tracked_run": 7
+  "next_coverage_review_at_tracked_run": 14
 }
