@@ -146,6 +146,28 @@
         ],
         "next_priority": "依輪替回到稅費，優先評估持有期間房屋稅與地價稅的買方需求"
       }
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "稅費",
+      "new_article": "/self-use-house-land-tax/",
+      "published_date": "2026-10-06",
+      "changes": [
+        "新增自住房屋稅與地價稅申請指南，分清房屋稅1%／1.2%與地價稅2‰的資格、限制及逾期效果",
+        "實質補強買房稅費舊文，加入交屋後持有稅差異與新指南雙向內部連結",
+        "首頁稅費主題改為可索引文章入口，更新文章列表、Article/Breadcrumb與sitemap",
+        "保留並同步GitHub main新增的離線SEO驗證工作流程與專案文件",
+        "重新查核青安3.0自2026-08-01受理，未發現需更正的新變動"
+      ],
+      "sources_checked_on": "2026-10-06",
+      "performance_data_available": false,
+      "source_versions": {
+        "mof_house_tax_2_faq": "checked_2026-10-06",
+        "etax_house_tax_2026_deadline": "2026-03-16",
+        "etax_self_use_land_guide_updated": "2026-09-08",
+        "etax_land_tax_2026_deadline_updated": "2026-09-11",
+        "nta_qing_an_3_0": "checked_2026-10-06"
+      }
     }
   ],
   "review_every_runs": 7,
