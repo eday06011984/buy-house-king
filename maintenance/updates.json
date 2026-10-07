@@ -168,6 +168,26 @@
         "etax_land_tax_2026_deadline_updated": "2026-09-11",
         "nta_qing_an_3_0": "checked_2026-10-06"
       }
+    },
+    {
+      "date": "2026-10-07",
+      "topic": "預售屋",
+      "new_article": "/presale-performance-guarantee/",
+      "published_date": "2026-10-07",
+      "changes": [
+        "新增預售屋履約保證指南，比較五種法定機制並提供建案、契約、證明文件與付款帳戶查核順序",
+        "實質補強預售屋契約審閱舊文，加入履約擔保查核的下一步與雙向內部連結",
+        "修正首頁預售屋主題缺少連結的SEO問題，更新文章列表、Article/Breadcrumb與sitemap",
+        "重新查核青安3.0自2026-08-01受理，未發現需修正的新變動"
+      ],
+      "sources_checked_on": "2026-10-07",
+      "performance_data_available": false,
+      "source_versions": {
+        "presale_contract_current_effective": "2023-07-01",
+        "moi_presale_project_lookup": "checked_2026-10-07",
+        "cpc_presale_contract_inspection_published": "2026-09-23",
+        "nta_qing_an_3_0": "checked_2026-10-07"
+      }
     }
   ],
   "review_every_runs": 7,
