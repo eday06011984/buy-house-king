@@ -188,6 +188,26 @@
         "cpc_presale_contract_inspection_published": "2026-09-23",
         "nta_qing_an_3_0": "checked_2026-10-07"
       }
+    },
+    {
+      "date": "2026-10-08",
+      "topic": "中古屋",
+      "new_article": "/used-house-offer-negotiation/",
+      "published_date": "2026-10-08",
+      "changes": [
+        "新增中古屋斡旋金與要約書指南，說明買方選擇權、轉為定金與返還風險",
+        "提供貸款、產權、屋況、設備、期限、撤回與後續簽約的書面出價清單",
+        "實質補強中古屋產權與屋齡舊文，把查核疑點銜接到出價條件並加入雙向內部連結",
+        "更新首頁文章入口、Article/Breadcrumb 與 sitemap",
+        "重新查核青安3.0自2026-08-01受理，未發現需修正的新變動"
+      ],
+      "sources_checked_on": "2026-10-08",
+      "performance_data_available": false,
+      "source_versions": {
+        "ftc_real_estate_broker_rules": "checked_2026-10-08",
+        "moi_negotiation_deposit_faq": "checked_2026-10-08",
+        "nta_qing_an_3_0": "checked_2026-10-08"
+      }
     }
   ],
   "review_every_runs": 7,
