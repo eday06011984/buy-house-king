@@ -208,6 +208,26 @@
         "moi_negotiation_deposit_faq": "checked_2026-10-08",
         "nta_qing_an_3_0": "checked_2026-10-08"
       }
+    },
+    {
+      "date": "2026-10-09",
+      "topic": "看屋驗屋",
+      "new_article": "/used-house-handover-inspection/",
+      "published_date": "2026-10-09",
+      "changes": [
+        "新增中古屋交屋驗屋指南，區分初驗、缺失紀錄、修繕複驗與正式點交",
+        "依現行成屋契約與建物現況確認書整理漏水、供排水、附屬設備及維持原狀點交的查核基準",
+        "明確說明驗屋細節多屬契約約定或行業慣例，不捏造政府統一合格標準",
+        "實質補強中古屋看屋舊文，區分買前看屋與簽約後驗屋並加入雙向內部連結",
+        "更新首頁、Article/Breadcrumb、canonical 與 sitemap；重新查核青安3.0實施日期"
+      ],
+      "sources_checked_on": "2026-10-09",
+      "performance_data_available": false,
+      "source_versions": {
+        "existing_house_contract_current_effective": "2026-04-01",
+        "moi_home_inspection_statement_published": "2025-11-03",
+        "nta_qing_an_3_0": "checked_2026-10-09"
+      }
     }
   ],
   "review_every_runs": 7,
