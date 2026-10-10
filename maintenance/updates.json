@@ -228,6 +228,28 @@
         "moi_home_inspection_statement_published": "2025-11-03",
         "nta_qing_an_3_0": "checked_2026-10-09"
       }
+    },
+    {
+      "date": "2026-10-10",
+      "topic": "首次買房",
+      "new_article": "/first-home-down-payment/",
+      "published_date": "2026-10-10",
+      "changes": [
+        "新增第一次買房自備款指南，拆分房價核貸差額、稅費、個案費用、入住支出與緊急預備金",
+        "提供成交價1500萬元的三種核貸情境，明確標示示例不是銀行報價",
+        "依國庫署資料說明鑑價與授信可能造成核貸缺口，最高八成並非每案保證",
+        "實質補強第一次買房流程舊文，更新自備款結構、修改日期與雙向內部連結",
+        "更新首頁文章入口、Article/Breadcrumb、canonical 與 sitemap；重新查核青安3.0實施日期"
+      ],
+      "sources_checked_on": "2026-10-10",
+      "performance_data_available": false,
+      "source_versions": {
+        "nta_qing_an_3_0_principles_updated": "2026-07-28",
+        "nta_qing_an_3_0": "checked_2026-10-10",
+        "nta_mortgage_valuation_statement": "checked_2026-10-10",
+        "cbc_credit_control_faq": "checked_2026-10-10",
+        "existing_house_contract_current_effective": "2026-04-01"
+      }
     }
   ],
   "review_every_runs": 7,
