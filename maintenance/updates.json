@@ -250,8 +250,47 @@
         "cbc_credit_control_faq": "checked_2026-10-10",
         "existing_house_contract_current_effective": "2026-04-01"
       }
+    },
+    {
+      "date": "2026-10-11",
+      "topic": "房貸",
+      "new_article": "/mortgage-early-repayment/",
+      "published_date": "2026-10-11",
+      "changes": [
+        "新增房貸提前還款指南，分清部分還本、全部清償與轉貸結清",
+        "依金管會定型化契約說明無限制與限制清償期間、最長三年及違約金遞減原則",
+        "提供提前還本100萬元的月付與利息假設試算，明確排除違約金、費用與利率變動",
+        "實質補強房貸寬限期舊文，加入寬限期內提前還本的契約與攤還表檢查",
+        "更新首頁、Article/Breadcrumb、canonical 與 sitemap；重新查核青安3.0實施日期"
+      ],
+      "sources_checked_on": "2026-10-11",
+      "performance_data_available": false,
+      "source_versions": {
+        "fsc_personal_home_loan_contract_effective": "2015-08-12",
+        "fsc_personal_home_loan_required_terms": "checked_2026-10-11",
+        "nta_qing_an_3_0": "checked_2026-10-11"
+      },
+      "coverage_review": {
+        "tracked_executions_reviewed": 14,
+        "content_run_records": 13,
+        "topic_counts_after_run": {
+          "首次買房": 2,
+          "房貸": 3,
+          "稅費": 2,
+          "預售屋": 2,
+          "中古屋": 2,
+          "看屋驗屋": 2
+        },
+        "findings": [
+          "六大輪替主題均已有至少兩篇獨立可索引指南",
+          "房貸內容已分為寬限期月付、授信審核與提前還款三個不同搜尋意圖",
+          "同一Asia/Taipei日期的重複執行已去重，未重複新增文章",
+          "目前沒有可取得的Search Console或真實訪客成效資料，無法驗證收錄、曝光、點擊或排名變化"
+        ],
+        "next_priority": "依輪替回到稅費，優先評估買屋當年房屋稅、地價稅由誰繳與交屋分算的搜尋需求"
+      }
     }
   ],
   "review_every_runs": 7,
-  "next_coverage_review_at_tracked_run": 14
+  "next_coverage_review_at_tracked_run": 21
 }
