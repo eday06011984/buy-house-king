@@ -289,6 +289,27 @@
         ],
         "next_priority": "依輪替回到稅費，優先評估買屋當年房屋稅、地價稅由誰繳與交屋分算的搜尋需求"
       }
+    },
+    {
+      "date": "2026-10-12",
+      "topic": "稅費",
+      "new_article": "/property-tax-transfer-apportionment/",
+      "published_date": "2026-10-12",
+      "changes": [
+        "新增買屋當年房屋稅與地價稅交屋分算指南，區分法定納稅義務人與買賣契約結算",
+        "依官方法規與稅務機關資料說明房屋稅2月末日、地價稅8月31日基準日",
+        "提供三種移轉日期案例及分界日、計算基礎、補退差額與付款證明的契約查核清單",
+        "實質補強買房稅費舊文，加入持有稅基準日、交屋分算及雙向內部連結",
+        "更新首頁、Article/Breadcrumb、canonical 與 sitemap；重新查核青安3.0實施日期"
+      ],
+      "sources_checked_on": "2026-10-12",
+      "performance_data_available": false,
+      "source_versions": {
+        "house_tax_act": "checked_2026-10-12",
+        "house_tax_new_reference_date_effective": "2024-07-01",
+        "land_value_tax_reference_date": "checked_2026-10-12",
+        "nta_qing_an_3_0": "checked_2026-10-12"
+      }
     }
   ],
   "review_every_runs": 7,
