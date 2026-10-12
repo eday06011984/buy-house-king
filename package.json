@@ -1,0 +1,15 @@
+{
+  "name": "buy-house-king",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build_worker.py",
+    "validate": "node scripts/validate-artifact.mjs",
+    "db:generate": "drizzle-kit generate",
+    "test": "node --test scripts/test_pageviews.mjs"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.31.10",
+    "drizzle-orm": "0.45.2"
+  }
+}

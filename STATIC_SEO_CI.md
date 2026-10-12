@@ -10,11 +10,11 @@ python scripts/check_static_seo.py
 The workflow runs on pull requests targeting `main`, pushes to `main` and
 `codex/static-seo-ci-*`, and manual dispatch. It has read-only repository
 permissions and no deployment steps or secrets. Checks apply to the entire
-`dist` tree rather than only changed files.
+`site-static` source tree rather than only changed files.
 
 ## Contract
 
-- `dist/index.html`, `robots.txt`, and `sitemap.xml` must exist. The sitemap
+- `site-static/index.html`, `robots.txt`, and `sitemap.xml` must exist. The sitemap
   must parse as a nonempty namespaced `urlset`; each unique, absolute HTTPS
   site URL must resolve to an HTML file. `robots.txt` must declare the sitemap
   and allow its URLs for generic crawlers and Googlebot.

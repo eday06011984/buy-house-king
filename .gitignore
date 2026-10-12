@@ -2,3 +2,10 @@
 *.zip
 __pycache__/
 *.py[cod]
+
+node_modules/
+dist/
+.sites-runtime/
+.wrangler/
+
+/node_modules

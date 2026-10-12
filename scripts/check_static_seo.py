@@ -191,7 +191,7 @@ def check(root):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--dist', type=Path, default=Path(__file__).resolve().parents[1] / 'dist')
+    parser.add_argument('--dist', type=Path, default=Path(__file__).resolve().parents[1] / 'site-static')
     args = parser.parse_args()
     try:
         errors = check(args.dist)

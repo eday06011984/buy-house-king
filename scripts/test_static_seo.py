@@ -14,7 +14,7 @@ class StaticSEOTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / 'dist'
-        shutil.copytree(Path(__file__).resolve().parents[1] / 'dist', self.root)
+        shutil.copytree(Path(__file__).resolve().parents[1] / 'site-static', self.root)
         self.article = 'used-house-title-age-check/index.html'
 
     def edit(self, path, old, new):

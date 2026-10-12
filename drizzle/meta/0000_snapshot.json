@@ -1,0 +1,63 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "acff4721-3971-48fd-854e-322451b8f3f0",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "daily_pageviews": {
+      "name": "daily_pageviews",
+      "columns": {
+        "day": {
+          "name": "day",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "path": {
+          "name": "path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "views": {
+          "name": "views",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "daily_pageviews_day_path_pk": {
+          "columns": [
+            "day",
+            "path"
+          ],
+          "name": "daily_pageviews_day_path_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "daily_pageviews_views_nonnegative": {
+          "name": "daily_pageviews_views_nonnegative",
+          "value": "\"daily_pageviews\".\"views\" >= 0"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
