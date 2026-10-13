@@ -310,6 +310,27 @@
         "land_value_tax_reference_date": "checked_2026-10-12",
         "nta_qing_an_3_0": "checked_2026-10-12"
       }
+    },
+    {
+      "date": "2026-10-13",
+      "topic": "預售屋",
+      "new_article": "/presale-handover-retention/",
+      "published_date": "2026-10-13",
+      "changes": [
+        "新增預售屋驗收與5%交屋保留款指南，區分驗收、修繕、複驗、所有權移轉與正式交屋",
+        "依現行定型化契約說明房地總價5%須從自備款部分保留，並提供1500萬元試算",
+        "補充驗收前須完成使用執照、水電及契約廣告設施，並整理缺失紀錄與複驗清單",
+        "實質補強預售屋契約審閱舊文，加入保留款計算、付款表查核及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-13",
+      "performance_data_available": false,
+      "source_versions": {
+        "presale_contract_current_effective": "2023-07-01",
+        "cpc_presale_contract_inspection_published": "2026-09-23",
+        "cpc_handover_retention_inspection_published": "2025-08-25",
+        "nta_qing_an_3_0": "checked_2026-10-13"
+      }
     }
   ],
   "review_every_runs": 7,
