@@ -331,6 +331,27 @@
         "cpc_handover_retention_inspection_published": "2025-08-25",
         "nta_qing_an_3_0": "checked_2026-10-13"
       }
+    },
+    {
+      "date": "2026-10-14",
+      "topic": "中古屋",
+      "new_article": "/used-house-post-handover-leak/",
+      "published_date": "2026-10-14",
+      "changes": [
+        "新增中古屋交屋後漏水處理指南，整理止損、留證、書面通知、共同勘查、鑑定與救濟順序",
+        "依民法第354至366條釐清交付時瑕疵、發現即通知、通知後六個月與交付後五年的不同期間",
+        "依現行建物現況確認書說明修繕、減價、自行修繕等勾選內容如何影響交屋後判斷",
+        "實質補強中古屋交屋驗屋舊文，新增交屋後漏水時間線與雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-14",
+      "performance_data_available": false,
+      "source_versions": {
+        "civil_code_current_revision": "2026-08-17",
+        "existing_house_contract_current_effective": "2026-04-01",
+        "consumer_dispute_procedure": "checked_2026-10-14",
+        "nta_qing_an_3_0": "checked_2026-10-14"
+      }
     }
   ],
   "review_every_runs": 7,
