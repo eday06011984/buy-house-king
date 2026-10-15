@@ -352,6 +352,29 @@
         "consumer_dispute_procedure": "checked_2026-10-14",
         "nta_qing_an_3_0": "checked_2026-10-14"
       }
+    },
+    {
+      "date": "2026-10-15",
+      "topic": "看屋驗屋",
+      "new_article": "/home-inspection-company-checklist/",
+      "published_date": "2026-10-15",
+      "changes": [
+        "新增驗屋公司挑選指南，提供服務範圍、判定依據、報告交付、複驗與費用的可比較清單",
+        "依內政部說明釐清驗屋細項多屬契約約定或行業慣例，不把業者自訂門檻誤稱為政府統一標準",
+        "加入實際執行與簽署人、技師執業資訊及絕對宣稱的查核提醒，不推薦特定業者或捏造價格排名",
+        "實質補強預售屋驗收與5%保留款舊文，新增委託驗屋服務約定及雙向內部連結，並修正一個失效的行政院契約來源網址",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-15",
+      "performance_data_available": false,
+      "source_versions": {
+        "moi_home_inspection_statement_published": "2025-11-03",
+        "presale_contract_current_effective": "2023-07-01",
+        "cpc_presale_contract_inspection_published": "2026-09-23",
+        "pcc_engineer_lookup": "checked_2026-10-15",
+        "consumer_dispute_procedure": "checked_2026-10-15",
+        "nta_qing_an_3_0": "checked_2026-10-15"
+      }
     }
   ],
   "review_every_runs": 7,
