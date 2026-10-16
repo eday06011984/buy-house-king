@@ -375,6 +375,26 @@
         "consumer_dispute_procedure": "checked_2026-10-15",
         "nta_qing_an_3_0": "checked_2026-10-15"
       }
+    },
+    {
+      "date": "2026-10-16",
+      "topic": "首次買房",
+      "new_article": "/first-home-contract-checklist/",
+      "published_date": "2026-10-16",
+      "changes": [
+        "新增第一次買成屋簽約指南，整理至少5日審閱、完整契約與附件及簽約當天15項清單",
+        "依現行成屋定型化契約拆解簽約款、備證款、完稅款、交屋款與收款證明",
+        "釐清原抵押權代償塗銷，以及核貸不足依不可歸責、可歸責賣方或買方的不同處理",
+        "實質補強第一次買房流程舊文，加入四階段付款、原抵押權與新文章雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-16",
+      "performance_data_available": false,
+      "source_versions": {
+        "existing_house_contract_current_effective": "2026-04-01",
+        "taipei_property_transfer_page_reviewed": "2026-09-24",
+        "nta_qing_an_3_0": "checked_2026-10-16"
+      }
     }
   ],
   "review_every_runs": 7,
