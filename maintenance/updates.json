@@ -395,6 +395,27 @@
         "taipei_property_transfer_page_reviewed": "2026-09-24",
         "nta_qing_an_3_0": "checked_2026-10-16"
       }
+    },
+    {
+      "date": "2026-10-17",
+      "topic": "房貸",
+      "new_article": "/mortgage-interest-rate-comparison/",
+      "published_date": "2026-10-17",
+      "changes": [
+        "新增房貸利率比較指南，區分固定、機動、一段與分段利率，並提供三家銀行同條件報價表",
+        "依金管會現行購屋貸款應記載事項整理指標利率、固定加碼、15日內通知與調整後攤還表",
+        "釐清總費用年百分率不等於借款利率，並整理納入與排除費用及可比前提",
+        "實質補強房貸審核舊文，新增核貸後利率報價比較流程與雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-17",
+      "performance_data_available": false,
+      "source_versions": {
+        "fsc_personal_home_loan_required_terms": "checked_2026-10-17",
+        "fsc_consumer_credit_apr_standard": "checked_2026-10-17",
+        "fsc_consumer_banking_guide": "checked_2026-10-17",
+        "nta_qing_an_3_0": "checked_2026-10-17"
+      }
     }
   ],
   "review_every_runs": 7,
