@@ -416,8 +416,49 @@
         "fsc_consumer_banking_guide": "checked_2026-10-17",
         "nta_qing_an_3_0": "checked_2026-10-17"
       }
+    },
+    {
+      "date": "2026-10-18",
+      "topic": "稅費",
+      "new_article": "/home-buying-deed-tax-filing/",
+      "published_date": "2026-10-18",
+      "changes": [
+        "新增買房契稅申報指南，分清買方申報責任、6%稅率、核定契價與土地免徵範圍",
+        "依現行契稅條例說明契約成立當日計入30日，整理申報文件、線上流程與過戶證明",
+        "區分遲申報怠報金與逾期繳納滯納金，補充未辦保存登記房屋及特殊案件提醒",
+        "實質補強買房稅費舊文，新增契稅申報至過戶流程與雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-18",
+      "performance_data_available": false,
+      "source_versions": {
+        "deed_tax_act_current_revision": "2010-05-05",
+        "etax_deed_tax_guide_updated": "2026-09-08",
+        "tax_collection_act_current_revision": "2021-12-17",
+        "local_tax_online_filing": "checked_2026-10-18",
+        "nta_qing_an_3_0": "checked_2026-10-18"
+      },
+      "coverage_review": {
+        "tracked_executions_reviewed": 21,
+        "content_run_records": 20,
+        "topic_counts_after_run": {
+          "首次買房": 3,
+          "房貸": 4,
+          "稅費": 4,
+          "預售屋": 3,
+          "中古屋": 3,
+          "看屋驗屋": 3
+        },
+        "findings": [
+          "六大輪替主題均已有至少三篇獨立可索引指南，房貸與稅費各有四篇不同搜尋意圖",
+          "稅費內容已涵蓋交易稅費試算、自住持有稅、交屋分算與契稅申報期限",
+          "同一Asia/Taipei日期的重複執行已去重，未重複新增文章",
+          "目前沒有可取得的Search Console或經網站擁有者驗證的真實成效資料，無法驗證收錄、曝光、點擊或排名變化"
+        ],
+        "next_priority": "依輪替回到預售屋，優先評估客變、履約進度或解約條件的獨立搜尋需求"
+      }
     }
   ],
   "review_every_runs": 7,
-  "next_coverage_review_at_tracked_run": 21
+  "next_coverage_review_at_tracked_run": 28
 }
