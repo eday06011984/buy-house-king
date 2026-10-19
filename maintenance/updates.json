@@ -457,6 +457,27 @@
         ],
         "next_priority": "依輪替回到預售屋，優先評估客變、履約進度或解約條件的獨立搜尋需求"
       }
+    },
+    {
+      "date": "2026-10-19",
+      "topic": "預售屋",
+      "new_article": "/presale-construction-delay/",
+      "published_date": "2026-10-19",
+      "changes": [
+        "新增預售屋延遲交屋指南，區分開工、取得使用執照、所有權移轉與通知交屋四個里程碑",
+        "依現行定型化契約說明可展延事由、已繳房地價款每日萬分之五遲延利息與逾期三個月違約門檻",
+        "提供分段計息示例、書面詢問與工程進度留證清單，提醒爭議中不宜自行停付",
+        "實質補強預售屋契約審閱舊文，新增工程期限、展延與遲延責任的簽約查核及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-19",
+      "performance_data_available": false,
+      "source_versions": {
+        "presale_contract_current_effective": "2023-07-01",
+        "cpc_presale_contract_inspection_published": "2026-09-23",
+        "consumer_dispute_procedure": "checked_2026-10-19",
+        "nta_qing_an_3_0": "checked_2026-10-19"
+      }
     }
   ],
   "review_every_runs": 7,
