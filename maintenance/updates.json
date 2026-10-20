@@ -478,6 +478,27 @@
         "consumer_dispute_procedure": "checked_2026-10-19",
         "nta_qing_an_3_0": "checked_2026-10-19"
       }
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "中古屋",
+      "new_article": "/used-house-escrow-guarantee/",
+      "published_date": "2026-10-20",
+      "changes": [
+        "新增中古屋履約保證指南，區分價金專戶、產權移轉、房貸撥款、屋況與違約爭議的保障邊界",
+        "依官方交易安全資料整理簽約、備證、完稅與交屋四階段的專戶付款及撥款流程",
+        "依公平會廣告不實案例補強第三方託管查核，提供服務提供者、帳戶、保障金額、原抵押權與爭議條款清單",
+        "實質補強中古屋斡旋金舊文，新增成交後履約專戶付款查核及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-20",
+      "performance_data_available": false,
+      "source_versions": {
+        "existing_house_contract_current_effective": "2026-04-01",
+        "ftc_escrow_ad_decision_page_updated": "2024-03-01",
+        "property_transaction_safety": "checked_2026-10-20",
+        "nta_qing_an_3_0": "checked_2026-10-20"
+      }
     }
   ],
   "review_every_runs": 7,
