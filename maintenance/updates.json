@@ -520,6 +520,27 @@
         "property_description_required_items": "checked_2026-10-21",
         "nta_qing_an_3_0": "checked_2026-10-21"
       }
+    },
+    {
+      "date": "2026-10-22",
+      "topic": "首次買房",
+      "new_article": "/first-home-real-price-registration/",
+      "published_date": "2026-10-22",
+      "changes": [
+        "新增實價登錄查詢指南，依生活圈、型態、屋齡、樓層、面積、車位及交易日期篩選可比案例",
+        "依內政部查詢須知釐清均價、車位價款與面積是否分列、未登記增建及概略位置對單價判讀的影響",
+        "提供出價前可比表、案例分層與10項查價清單，避免把單一成交價當成整區行情或特定房屋估價",
+        "實質補強第一次買房流程舊文，新增車位單價判讀、官方查詢須知及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-22",
+      "performance_data_available": false,
+      "source_versions": {
+        "moi_real_price_query_faq": "checked_2026-10-22",
+        "moi_real_price_update_schedule": "checked_2026-10-22",
+        "mof_qing_an_3_0_announcement_updated": "2026-07-29",
+        "nta_qing_an_3_0": "checked_2026-10-22"
+      }
     }
   ],
   "review_every_runs": 7,
