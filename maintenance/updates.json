@@ -541,6 +541,28 @@
         "mof_qing_an_3_0_announcement_updated": "2026-07-29",
         "nta_qing_an_3_0": "checked_2026-10-22"
       }
+    },
+    {
+      "date": "2026-10-23",
+      "topic": "房貸",
+      "new_article": "/mortgage-signing-disbursement/",
+      "published_date": "2026-10-23",
+      "changes": [
+        "新增房貸對保與撥款指南，依官方流程區分申請、估價、審核、簽約對保、過戶設定與撥款",
+        "整理對保書面條件、常見文件、抵押權設定、原房貸代償及撥款委託的12項核對清單",
+        "依銀行局撥款委託書說明款項可撥給賣方、履約專戶或先代償原貸款，避免誤認對保完成等於已撥款",
+        "實質補強房貸審核舊文，新增核貸後到對保、設定與撥款的流程及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-23",
+      "performance_data_available": false,
+      "source_versions": {
+        "tcb_mortgage_process": "checked_2026-10-23",
+        "fsc_personal_mortgage_contract": "checked_2026-10-23",
+        "banking_bureau_disbursement_authorization": "checked_2026-10-23",
+        "moi_existing_house_contract_effective": "2026-04-01",
+        "nta_qing_an_3_0": "checked_2026-10-23"
+      }
     }
   ],
   "review_every_runs": 7,
