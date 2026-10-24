@@ -563,6 +563,28 @@
         "moi_existing_house_contract_effective": "2026-04-01",
         "nta_qing_an_3_0": "checked_2026-10-23"
       }
+    },
+    {
+      "date": "2026-10-24",
+      "topic": "稅費",
+      "new_article": "/home-buying-stamp-tax/",
+      "published_date": "2026-10-24",
+      "changes": [
+        "新增買房印花稅指南，分清辦理物權登記的公契1‰與一般私契的課稅差異",
+        "整理公契金額試算、契據份數、實貼稅票、個案繳款書及線上繳稅流程",
+        "釐清私契逐期收款簽章可能具有銀錢收據性質，避免誤認為同一份私契再按房價1‰課稅",
+        "實質補強買房稅費舊文，新增契據份數、私契收款與繳納方式及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-24",
+      "performance_data_available": false,
+      "source_versions": {
+        "stamp_tax_act": "checked_2026-10-24",
+        "etax_stamp_tax_guide": "checked_2026-10-24",
+        "etax_public_deed_explanation": "checked_2026-10-24",
+        "local_tax_online_filing": "checked_2026-10-24",
+        "nta_qing_an_3_0": "checked_2026-10-24"
+      }
     }
   ],
   "review_every_runs": 7,
