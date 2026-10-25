@@ -585,6 +585,27 @@
         "local_tax_online_filing": "checked_2026-10-24",
         "nta_qing_an_3_0": "checked_2026-10-24"
       }
+    },
+    {
+      "date": "2026-10-25",
+      "topic": "預售屋",
+      "new_article": "/presale-contract-assignment/",
+      "published_date": "2026-10-25",
+      "changes": [
+        "新增預售屋換約指南，區分免申請、重大變故核准與一般禁止轉售三類",
+        "依平均地權條例及審核辦法整理核准前廣告限制、2年1戶、核准效期與50萬至300萬元罰鍰",
+        "釐清契約讓與、解除契約與交屋後出售的差異，避免把解約當成規避換約限制或當然全額退款",
+        "實質補強預售屋契約審閱舊文，新增換約與解約條款查核及雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-25",
+      "performance_data_available": false,
+      "source_versions": {
+        "equalization_of_land_rights_act": "checked_2026-10-25",
+        "presale_assignment_review_rules_revised": "2025-01-14",
+        "presale_assignment_circumstances_effective": "2023-07-01",
+        "nta_qing_an_3_0": "checked_2026-10-25"
+      }
     }
   ],
   "review_every_runs": 7,
