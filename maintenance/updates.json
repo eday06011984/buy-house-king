@@ -606,8 +606,47 @@
         "presale_assignment_circumstances_effective": "2023-07-01",
         "nta_qing_an_3_0": "checked_2026-10-25"
       }
+    },
+    {
+      "date": "2026-10-26",
+      "topic": "中古屋",
+      "new_article": "/used-house-brokerage-fee/",
+      "published_date": "2026-10-26",
+      "changes": [
+        "新增中古屋仲介費指南，釐清6%為買賣雙方報酬合計上限而非固定費率或買方固定2%",
+        "以實際成交價提供1%與2%純算式示例，並整理服務內容、付款時點、抵充與憑證議價清單",
+        "區分斡旋金、定金、房屋價款與仲介服務費，補充疑似超收、價差或說法不同時的留證與申訴步驟",
+        "實質補強中古屋斡旋金舊文，新增斡旋金與服務費的款項區分及雙向內部連結",
+        "保留最新手機導覽、購屋流程連結、Worker、D1瀏覽次數統計與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-26",
+      "performance_data_available": false,
+      "performance_data_note": "GSC Wizard 的網站清單與資源摘要查詢於2026-10-26皆回傳INVALID_ARGUMENT，沒有可驗證的Search Console曝光、點擊、排名或索引成效可供本次判斷。",
+      "source_versions": {
+        "real_estate_broker_management_act": "checked_2026-10-26",
+        "moi_brokerage_fee_standard": "checked_2026-10-26",
+        "taichung_land_brokerage_fee_faq": "checked_2026-10-26",
+        "nta_qing_an_3_0": "checked_2026-10-26"
+      },
+      "coverage_review": {
+        "tracked_runs_reviewed": 28,
+        "topic_counts_after_run": {
+          "首次買房": 4,
+          "房貸": 5,
+          "稅費": 5,
+          "預售屋": 5,
+          "中古屋": 5,
+          "看屋驗屋": 4
+        },
+        "findings": [
+          "六大輪替主題均已有至少4次具獨立搜尋意圖的追蹤更新，站內結構沒有明顯主題空白",
+          "中古屋內容已涵蓋產權屋齡、出價斡旋、履約保證、仲介費與交屋後漏水；今天補上出價前最常見的交易成本決策",
+          "未取得可驗證的Search Console資料，因此無法判斷收錄、曝光、點擊、CTR或排名變化，也不據此宣稱成效"
+        ],
+        "next_priority": "依輪替回到看屋驗屋，優先補足可由官方資料驗證且不與現況確認書、交屋驗屋重疊的檢查意圖"
+      }
     }
   ],
   "review_every_runs": 7,
-  "next_coverage_review_at_tracked_run": 28
+  "next_coverage_review_at_tracked_run": 35
 }
