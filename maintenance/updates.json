@@ -645,6 +645,27 @@
         ],
         "next_priority": "依輪替回到看屋驗屋，優先補足可由官方資料驗證且不與現況確認書、交屋驗屋重疊的檢查意圖"
       }
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "看屋驗屋",
+      "new_article": "/used-house-community-management-checklist/",
+      "published_date": "2026-10-27",
+      "changes": [
+        "新增中古屋管委會與社區管理查核指南，整理規約、管理費欠費、公共基金、財務報表、會議紀錄與安全申報",
+        "說明利害關係人與繼受人調閱文件的法規基礎，提醒尚未能證明交易關係時請賣方或現任屋主協助調閱並把補件寫入條件",
+        "建立基金餘額、近年收支、重大修繕與臨時分攤的交叉判讀，避免用單一餘額判定社區好壞",
+        "實質補強中古屋看屋清單舊文，新增管委會文件取得與社區支出判讀並加入雙向內部連結",
+        "保留既有Worker、D1瀏覽次數統計、Google功能與維護流程；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-27",
+      "performance_data_available": false,
+      "source_versions": {
+        "apartment_building_management_act": "checked_2026-10-27",
+        "nlma_apartment_management_qa": "checked_2026-10-27",
+        "existing_house_contract_current_effective": "2026-04-01",
+        "nta_qing_an_3_0": "checked_2026-10-27"
+      }
     }
   ],
   "review_every_runs": 7,
