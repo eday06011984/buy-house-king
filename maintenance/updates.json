@@ -666,6 +666,27 @@
         "existing_house_contract_current_effective": "2026-04-01",
         "nta_qing_an_3_0": "checked_2026-10-27"
       }
+    },
+    {
+      "date": "2026-10-28",
+      "topic": "首次買房",
+      "new_article": "/qingan-3-loan-eligibility/",
+      "published_date": "2026-10-28",
+      "changes": [
+        "新增青安3.0資格與利率指南，整理申辦期間、年齡所得、家庭持屋、區域房價與自住條件",
+        "釐清青安並非僅限人生第一次買房，並整理一般、新婚、育兒額度及限貸一次規範",
+        "依現行基準整理3+3利息補貼階段，明示1.775%不是全期固定且利率會隨基準變動",
+        "實質補強第一次買房自備款舊文，更新青安資格、曾有房屋認定與雙向內部連結",
+        "保留Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap"
+      ],
+      "sources_checked_on": "2026-10-28",
+      "performance_data_available": false,
+      "source_versions": {
+        "nta_qingan_3_0_principles": "checked_2026-10-28",
+        "nta_qingan_3_0_faq": "checked_2026-10-28",
+        "executive_yuan_qingan_3_0": "checked_2026-10-28",
+        "nta_qingan_3_0_contacts": "checked_2026-10-28"
+      }
     }
   ],
   "review_every_runs": 7,
