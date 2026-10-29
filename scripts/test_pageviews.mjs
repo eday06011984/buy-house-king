@@ -59,12 +59,12 @@ test('HTML preserves canonical and all prior markup; public data files unchanged
   for(const path of ['robots.txt','sitemap.xml']) assert.equal(await (await worker.fetch(new Request(origin+'/'+path),{})).text(),readFileSync(new URL('../site-static/'+path,import.meta.url),'utf8'));
   assert.equal((await worker.fetch(new Request(origin+'/missing/'),{})).status,404);
 });
-function runClient({visible=true,webdriver=false,gpc=false,dnt='0',ua='Mozilla/5.0',search='',prerender=false}={}) {
+function runClient({visible=true,webdriver=false,gpc=false,dnt='0',ua='Mozilla/5.0',search='',prerender=false,storage}={}) {
   const calls=[], listeners=new Map();
   const document={visibilityState:visible?'visible':'hidden',prerendering:prerender,
     querySelector:()=>({href:origin+'/first-home-down-payment/'}),
     addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:name=>listeners.delete(name)};
-  const context={navigator:{webdriver,globalPrivacyControl:gpc,doNotTrack:dnt,userAgent:ua},window:{},document,location:{origin,search},URL,URLSearchParams,fetch:(...a)=>{calls.push(a);return Promise.resolve();}};
+  const context={navigator:{webdriver,globalPrivacyControl:gpc,doNotTrack:dnt,userAgent:ua},window:{sessionStorage:storage},document,location:{origin,search},URL,URLSearchParams,fetch:(...a)=>{calls.push(a);return Promise.resolve();}};
   vm.runInNewContext(readFileSync(new URL('../worker/pageview.js',import.meta.url),'utf8'),context);
   return {calls,document,listeners};
 }
@@ -95,4 +95,21 @@ except sqlite3.IntegrityError:pass
 else:raise AssertionError('negative views accepted')
 `;
   const res=spawnSync('python3',['-c',py],{encoding:'utf8'});assert.equal(res.status,0,res.stderr);
+});
+
+test('QA tab preference spans documents and can be cleared without counting control page',()=>{
+ const m=new Map(); const storage={getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)};
+ assert.equal(runClient({search:'?site_qa=1',storage}).calls.length,0);
+ assert.equal(runClient({storage}).calls.length,0);
+ assert.equal(runClient({search:'?site_qa=0',storage}).calls.length,0);
+ assert.equal(runClient({storage}).calls.length,1);
+});
+test('QA respects denied session storage without suppressing normal visitors',()=>{
+ const storage={getItem(){throw Error('blocked')},setItem(){throw Error('blocked')},removeItem(){throw Error('blocked')}};
+ assert.equal(runClient({storage}).calls.length,1);
+ for(const search of ['?site_qa=1','?site_qa=0','?site_qa']) assert.equal(runClient({search,storage}).calls.length,0);
+});
+test('delayed visibility is rechecked against current tab QA preference',()=>{
+ const m=new Map();const storage={getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)};
+ const r=runClient({visible:false,storage});m.set('site_qa','1');r.document.visibilityState='visible';r.listeners.get('visibilitychange')();assert.equal(r.calls.length,0);
 });

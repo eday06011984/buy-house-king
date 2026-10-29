@@ -687,6 +687,28 @@
         "executive_yuan_qingan_3_0": "checked_2026-10-28",
         "nta_qingan_3_0_contacts": "checked_2026-10-28"
       }
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "房貸",
+      "new_article": "/mortgage-fire-earthquake-insurance/",
+      "published_date": "2026-10-29",
+      "changes": [
+        "新增房貸火險與地震基本保險指南，區分住宅火險、地震基本保險及房貸壽險",
+        "依重置成本整理火險保額、地震基本保額150萬元、每年1350元保費及紅單臨時住宿費",
+        "說明設定抵押權後火險理賠及地震保險60%銀行、40%被保險人的給付安排",
+        "實質補強房貸對保與撥款舊文，新增投保時點、撥款條件及雙向內部連結",
+        "保留最新QA排除、Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap"
+      ],
+      "sources_checked_on": "2026-10-29",
+      "performance_data_available": false,
+      "source_versions": {
+        "fsc_residential_fire_earthquake_notice": "checked_2026-10-29",
+        "nlia_fire_insurance_faq": "checked_2026-10-29",
+        "treif_public_faq": "checked_2026-10-29",
+        "nlia_reference_terms_effective": "2026-01-01",
+        "nta_qing_an_3_0": "checked_2026-10-29"
+      }
     }
   ],
   "review_every_runs": 7,

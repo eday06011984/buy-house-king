@@ -6,7 +6,7 @@ const PUBLIC_PATHS = new Set(__PAGE_PATHS__);
 const TRACKER = __TRACKING_SCRIPT__;
 const STATS_HTML = __STATS_HTML__;
 const BOT = /bot|spider|crawler|headless|lighthouse|playwright|puppeteer|selenium|synthetic|sites-qa|siteqa|google-inspectiontool|facebookexternalhit|slurp/i;
-const PRIVACY_NOTICE = '<aside aria-label="隱私與瀏覽次數統計" style="max-width:1160px;margin:auto;padding:16px 24px;font-size:0.8rem;line-height:1.7"><details><summary>隱私與瀏覽次數統計</summary><p>本站從 2026-10-12 起僅彙總台灣日期、公開頁面路徑與瀏覽次數，不設 cookie 或訪客識別碼，不儲存 IP、來源、網址參數或瀏覽器資訊。統計不是人數；同一人重開頁面會再次計數。報表只顯示最近 90 天；較早的彙總於下一次成功計數時清除，因此無流量期間可能延後刪除。網站主機仍可能保有必要的營運紀錄。</p><p>啟用瀏覽器 Do Not Track / Global Privacy Control、停用 JavaScript，或以加上 ?no_track=1 的網址開啟本頁，可停止本次瀏覽計數；機器人排除並非百分之百準確。</p></details></aside>';
+const PRIVACY_NOTICE = '<aside aria-label="隱私與瀏覽次數統計" style="max-width:1160px;margin:auto;padding:16px 24px;font-size:0.8rem;line-height:1.7"><details><summary>隱私與瀏覽次數統計</summary><p>本站從 2026-10-12 起僅彙總台灣日期、公開頁面路徑與瀏覽次數，不設 cookie 或訪客識別碼，不儲存 IP、來源、網址參數或瀏覽器資訊。統計不是人數；同一人重開頁面會再次計數。報表只顯示最近 90 天；較早的彙總於下一次成功計數時清除，因此無流量期間可能延後刪除。網站主機仍可能保有必要的營運紀錄。</p><p>啟用瀏覽器 Do Not Track / Global Privacy Control、停用 JavaScript，或以加上 ?no_track=1 的網址開啟本頁，可停止本次瀏覽計數；維護驗收可使用 ?site_qa=1 在同一分頁儲存不計數偏好，?site_qa=0 解除（兩個控制頁均不計數）。此偏好不是訪客識別碼、不會傳到伺服器；瀏覽器拒絕分頁儲存時，需每頁帶參數。機器人排除並非百分之百準確。</p></details></aside>';
 const reply = (status, text = '', headers = {}) => new Response(status === 204 ? null : text, {
   status, headers: { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...headers }
 });

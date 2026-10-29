@@ -1,15 +1,24 @@
-/* No cookies, browser storage, identifiers, referrers, queries or individual event records. */
+/* No analytics identifiers or individual event records. sessionStorage holds only an optional QA exclusion preference. */
 (() => {
   'use strict';
+  const qaExcluded = () => {
+    const params = new URLSearchParams(location.search);
+    try {
+      if (params.get('site_qa') === '0') window.sessionStorage.removeItem('site_qa');
+      else if (params.has('site_qa')) window.sessionStorage.setItem('site_qa', '1');
+      if (params.has('site_qa')) return true;
+      return window.sessionStorage.getItem('site_qa') === '1';
+    } catch { return params.has('site_qa'); }
+  };
   const bot = /bot|spider|crawler|headless|lighthouse|playwright|puppeteer|selenium|synthetic|sites-qa|siteqa|google-inspectiontool|facebookexternalhit|slurp/i;
-  if (navigator.webdriver || navigator.globalPrivacyControl === true ||
+  if (qaExcluded() || navigator.webdriver || navigator.globalPrivacyControl === true ||
       navigator.doNotTrack === '1' || window.doNotTrack === '1' ||
       bot.test(navigator.userAgent || '') ||
       new URLSearchParams(location.search).get('no_track') === '1' ||
       location.origin !== 'https://buy-house-king.eday06011984.chatgpt.site') return;
   let sent = false;
   const send = () => {
-    if (sent || document.visibilityState !== 'visible' || document.prerendering) return;
+    if (qaExcluded() || sent || document.visibilityState !== 'visible' || document.prerendering) return;
     const canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) return;
     const page = new URL(canonical.href);

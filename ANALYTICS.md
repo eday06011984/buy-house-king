@@ -4,7 +4,7 @@ Added 2026-10-12. This is pageview counting, never a count of people, visits, or
 
 ## What is saved
 
-D1 `daily_pageviews` has exactly three columns: Taiwan calendar `day` (Asia/Taipei), an allowlisted canonical public `path`, and an integer `views`. `(day,path)` is the primary key. Each accepted request atomically increments one daily page aggregate; no individual events, visitor IDs, cookies, browser storage, IPs, user agents, referrers, full URLs, or query strings are stored by this code. Hosting infrastructure can retain its own necessary operational records.
+D1 `daily_pageviews` has exactly three columns: Taiwan calendar `day` (Asia/Taipei), an allowlisted canonical public `path`, and an integer `views`. `(day,path)` is the primary key. Each accepted request atomically increments one daily page aggregate; no individual events, visitor IDs, cookies, visitor browser storage, IPs, user agents, referrers, full URLs, or query strings are stored by this code. Hosting infrastructure can retain its own necessary operational records.
 
 The same-origin browser script sends `{path}` once per visible document. Hidden prerenders wait; visibility toggles do not count twice. Reloads or new documents do count again. Browser back-forward-cache restores keep the same in-memory flag. Failed writes are not retried. JS blockers, privacy preferences, network failures and exclusions can undercount. The filter cannot distinguish every bot or scripted request from a human.
 
@@ -30,3 +30,9 @@ Validation:
 - `node --test scripts/test_pageviews.mjs`
 
 No production synthetic events are part of validation. Production GETs do not execute JavaScript or increment counts. Owner report login and real post-publication writes require future authorized/organic use to verify end to end.
+
+## QA tab exclusion (2026-10-28)
+
+Open `?site_qa=1` before any browser QA; a boolean exclusion preference in sessionStorage suppresses this tab's later pages. It is not an identifier and is never sent to the server. `?site_qa=0` clears the preference; the control page itself is still excluded. Existing `?no_track=1` keeps its current-page-only behavior. If sessionStorage is blocked, ordinary counting is unchanged, but QA must include `site_qa=1` on every visited page. New tabs require the flag again. API tests must use `X-Site-QA: 1`, or run only against local/in-memory databases. Never send a synthetic ordinary production event to prove tracking.
+
+Read-only HTTP GET/HEAD checks do not execute the collector. Record the exact QA time and paths when exclusion cannot be confirmed. Do not delete or reclassify historical daily totals; unknown source remains unknown, and missing records do not establish zero visitors.
