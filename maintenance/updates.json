@@ -709,6 +709,29 @@
         "nlia_reference_terms_effective": "2026-01-01",
         "nta_qing_an_3_0": "checked_2026-10-29"
       }
+    },
+    {
+      "date": "2026-10-30",
+      "topic": "稅費",
+      "new_article": "/house-land-transaction-tax-self-use/",
+      "published_date": "2026-10-30",
+      "changes": [
+        "新增房地合一稅自住房地優惠指南，整理連續持有設籍居住6年、6年內無出租營業與家戶6年一次限制",
+        "說明課稅所得400萬元以內免稅、超過部分10%及成交價減成本費用與土地漲價總數額的計算架構",
+        "整理可保存的取得成本與改良支出憑證、不得減除的持有費用，以及所有權移轉登記次日起30日申報",
+        "實質補強自住房屋稅與地價稅舊文，新增三種自住租稅優惠差異與雙向內部連結",
+        "保留最新QA排除、Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-30",
+      "performance_data_available": false,
+      "source_versions": {
+        "income_tax_act_self_use": "checked_2026-10-30",
+        "etax_self_use_house_land_faq": "updated_2026-04-27_checked_2026-10-30",
+        "mof_house_land_tax_design": "checked_2026-10-30",
+        "etax_house_land_expenses": "checked_2026-10-30",
+        "etax_house_land_filing": "checked_2026-10-30",
+        "nta_qing_an_3_0": "checked_2026-10-30"
+      }
     }
   ],
   "review_every_runs": 7,
