@@ -732,6 +732,28 @@
         "etax_house_land_filing": "checked_2026-10-30",
         "nta_qing_an_3_0": "checked_2026-10-30"
       }
+    },
+    {
+      "date": "2026-10-31",
+      "topic": "預售屋",
+      "new_article": "/presale-area-discrepancy/",
+      "published_date": "2026-10-31",
+      "changes": [
+        "新增預售屋面積誤差與價款找補指南，區分主建物、附屬建物、共有部分、土地與車位資料",
+        "釐清面積短少由賣方全數找補、面積增加時買方最多找補2%，並說明應按各類約定價款與面積分別計算",
+        "說明土地、主建物或房屋登記總面積誤差須超過3%才進入買方解除契約門檻，剛好3%不等同超過3%",
+        "實質補強預售屋契約審閱期舊文，新增分戶持分表、公設分攤、分項價款與面積找補查核並建立雙向內部連結",
+        "保留最新QA排除、Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-10-31",
+      "performance_data_available": false,
+      "source_versions": {
+        "moi_presale_contract_template": "checked_2026-10-31",
+        "executive_yuan_area_discrepancy": "checked_2026-10-31",
+        "ftc_presale_sales_directions": "amended_2025-12-15_checked_2026-10-31",
+        "executive_yuan_presale_audit_2026": "checked_2026-10-31",
+        "nta_qing_an_3_0": "checked_2026-10-31"
+      }
     }
   ],
   "review_every_runs": 7,
