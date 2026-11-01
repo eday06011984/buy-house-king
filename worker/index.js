@@ -26,6 +26,12 @@ export async function pageview(request, env) {
       (request.headers.has('Sec-Fetch-Site') && request.headers.get('Sec-Fetch-Site') !== 'same-origin')) return reply(403, 'Forbidden');
   if (url.search || request.headers.get('X-Pageview') !== '1' ||
       request.headers.get('Content-Type')?.split(';')[0].trim() !== 'application/json') return reply(400, 'Invalid request');
+  // No-write diagnostic: validates the same bound table without fabricating a pageview.
+  if (request.headers.get('X-Site-QA') === 'health') {
+    if (!env.DB) return reply(503, 'Statistics unavailable');
+    try { await env.DB.prepare('SELECT 1 FROM daily_pageviews LIMIT 1').all(); return reply(204, '', {'X-Collector-Check':'database-read-ok'}); }
+    catch { return reply(503, 'Statistics unavailable'); }
+  }
   // Read headers only to honor privacy/QA exclusions. None are stored or logged.
   if (request.headers.get('DNT') === '1' || request.headers.get('Sec-GPC') === '1' ||
       request.headers.has('X-Site-Analytics-QA') || request.headers.has('X-Site-QA') ||
@@ -56,7 +62,7 @@ async function report(request, env) {
   const { day, cutoff } = dateWindow();
   try {
     const result = await env.DB.prepare('SELECT day, path, views FROM daily_pageviews WHERE day >= ? AND day <= ? ORDER BY day DESC, path ASC').bind(cutoff, day).all();
-    return reply(200, JSON.stringify({ metric: 'pageviews', timezone: 'Asia/Taipei', from: cutoff, to: day, retention: '90 calendar days; older rows pruned on next accepted pageview', rows: result.results ?? [] }), { 'Content-Type': 'application/json; charset=utf-8' });
+    return reply(200, JSON.stringify({ metric: 'pageviews', timezone: 'Asia/Taipei', from: cutoff, to: day, retention: '90 calendar days; older rows pruned on next accepted pageview', rows: result.results ?? [], data_status: result.results?.length ? 'recorded_partial' : 'no_records', checked_at: new Date().toISOString(), collector_read_status: 'ok' }), { 'Content-Type': 'application/json; charset=utf-8' });
   } catch { return reply(503, 'Statistics unavailable'); }
 }
 export default {

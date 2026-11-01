@@ -36,3 +36,9 @@ No production synthetic events are part of validation. Production GETs do not ex
 Open `?site_qa=1` before any browser QA; a boolean exclusion preference in sessionStorage suppresses this tab's later pages. It is not an identifier and is never sent to the server. `?site_qa=0` clears the preference; the control page itself is still excluded. Existing `?no_track=1` keeps its current-page-only behavior. If sessionStorage is blocked, ordinary counting is unchanged, but QA must include `site_qa=1` on every visited page. New tabs require the flag again. API tests must use `X-Site-QA: 1`, or run only against local/in-memory databases. Never send a synthetic ordinary production event to prove tracking.
 
 Read-only HTTP GET/HEAD checks do not execute the collector. Record the exact QA time and paths when exclusion cannot be confirmed. Do not delete or reclassify historical daily totals; unknown source remains unknown, and missing records do not establish zero visitors.
+
+## Collector health and missing data (2026-11-01)
+
+Use the existing POST collection route with its normal same-origin and JSON headers plus `X-Site-QA: health`. It performs only `SELECT 1 FROM daily_pageviews LIMIT 1`, returning 204 with `X-Collector-Check: database-read-ok`, or 503 on binding/table failure. This probe makes no writes, deletes nothing, exposes no statistics and creates no identifiers. It verifies only the route and database read, not all browser delivery or historical completeness.
+
+An empty owner report now explicitly displays 無法判定 rather than 0. Existing totals are labelled recorded views; omitted dates are unknown and recorded views may contain historical QA. Keep this distinction in maintenance reports, and never backfill data or treat an empty table as zero humans.

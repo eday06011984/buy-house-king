@@ -113,3 +113,16 @@ test('delayed visibility is rechecked against current tab QA preference',()=>{
  const m=new Map();const storage={getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)};
  const r=runClient({visible:false,storage});m.set('site_qa','1');r.document.visibilityState='visible';r.listeners.get('visibilitychange')();assert.equal(r.calls.length,0);
 });
+
+test('no-write health check reads the live table and does not fabricate a view',async()=>{
+ let reads=0,writes=0;
+ const DB={prepare(sql){assert.equal(sql,'SELECT 1 FROM daily_pageviews LIMIT 1');return {all:async()=>{reads++;return {results:[]}}}},batch:async()=>{writes++}};
+ const result=await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{DB});
+ assert.equal(result.status,204);assert.equal(result.headers.get('x-collector-check'),'database-read-ok');assert.equal(reads,1);assert.equal(writes,0);
+ assert.equal((await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{})).status,503);
+ assert.equal((await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{DB:{prepare(){throw Error('offline')}}})).status,503);
+});
+test('empty report UI does not imply zero visitors',()=>{
+ const html=readFileSync(new URL('../worker/stats.html',import.meta.url),'utf8');
+ assert.match(html,/無法判定（期間沒有紀錄，不代表零訪客）/);assert.match(html,/data.rows.length\?/);
+});
