@@ -754,6 +754,29 @@
         "executive_yuan_presale_audit_2026": "checked_2026-10-31",
         "nta_qing_an_3_0": "checked_2026-10-31"
       }
+    },
+    {
+      "date": "2026-11-01",
+      "topic": "中古屋",
+      "new_article": "/used-house-illegal-addition-check/",
+      "published_date": "2026-11-01",
+      "changes": [
+        "新增中古屋違建查核指南，整理頂樓加蓋、陽台外推、挑高夾層、一樓增建與隔間疑點",
+        "建立建物謄本、使用執照竣工圖、建物現況確認書及地方違建紀錄的五步交叉查核流程",
+        "說明地方系統查無案件不等於合法，既存或緩拆也不等於合法或永久不拆",
+        "實質補強中古屋產權與屋齡舊文，新增核准圖說、未登記增建、地方查詢限制與契約條件並建立雙向內部連結",
+        "保留QA排除、Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-11-01",
+      "performance_data_available": false,
+      "source_versions": {
+        "building_act": "checked_2026-11-01",
+        "illegal_building_handling_regulations": "checked_2026-11-01",
+        "existing_house_contract_current_effective": "2026-04-01_checked_2026-11-01",
+        "nlma_illegal_mezzanine_guidance": "checked_2026-11-01",
+        "local_illegal_building_query_limits": "checked_2026-11-01",
+        "nta_qing_an_3_0": "checked_2026-11-01"
+      }
     }
   ],
   "review_every_runs": 7,
