@@ -777,8 +777,49 @@
         "local_illegal_building_query_limits": "checked_2026-11-01",
         "nta_qing_an_3_0": "checked_2026-11-01"
       }
+    },
+    {
+      "date": "2026-11-02",
+      "topic": "看屋驗屋",
+      "new_article": "/used-house-chloride-test/",
+      "published_date": "2026-11-02",
+      "changes": [
+        "新增中古屋海砂屋與氯離子檢測指南，建立地方列管、現況確認書、報告及契約條件五步查核",
+        "釐清查無列管不等於安全、未檢測不等於合格，並區分硬固混凝土氯離子試驗與完整建築物鑑定",
+        "整理報告標的、取樣、方法、適用標準、各點結果與鑑定範圍，避免用單一數字判斷所有屋齡",
+        "實質補強建物現況確認書舊文，新增報告查核與地方清冊限制並建立雙向內部連結",
+        "保留Google驗證、QA排除、Worker、D1、Google功能與公開權限；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-11-02",
+      "performance_data_available": true,
+      "performance_data_note": "D1 daily_pageviews可讀到2026-10-23首頁1次與2026-10-26仲介費文章1次，共2次已記錄頁面瀏覽；這是彙總pageviews，不是訪客或不重複使用者，也不能把缺少資料的日期解讀為零。GSC Wizard網站清單仍回傳INVALID_ARGUMENT，沒有可驗證的Search Console曝光、點擊、CTR、排名或索引成效。",
+      "source_versions": {
+        "existing_house_contract_current_effective": "2026-04-01_checked_2026-11-02",
+        "nlma_chloride_management_effective": "2025-07-01_checked_2026-11-02",
+        "taipei_high_chloride_list": "checked_2026-11-02",
+        "taipei_appraisal_principles": "checked_2026-11-02",
+        "nta_qing_an_3_0": "checked_2026-11-02"
+      },
+      "coverage_review": {
+        "tracked_runs_reviewed": 35,
+        "topic_counts_after_run": {
+          "首次買房": 5,
+          "房貸": 6,
+          "稅費": 6,
+          "預售屋": 6,
+          "中古屋": 6,
+          "看屋驗屋": 6
+        },
+        "findings": [
+          "六大輪替主題各有5至6次具獨立搜尋意圖的追蹤更新，主題數量大致均衡",
+          "看屋驗屋已涵蓋看屋清單、現況確認書、交屋驗屋、驗屋公司、社區管理與氯離子查核，後續宜優先深化既有文章與官方資料更新，不為湊篇數拆分相近意圖",
+          "D1目前僅有2次已記錄頁面瀏覽，樣本不足以判斷內容成效；Search Console資料仍不可用，因此不宣稱收錄、曝光、點擊或排名改善"
+        ],
+        "next_priority": "依輪替回到首次買房；先檢查既有文章是否有可驗證的讀者問題或法規更新，來源不足或意圖重複時改為深化舊文",
+        "next_review_at_tracked_run": 42
+      }
     }
   ],
   "review_every_runs": 7,
-  "next_coverage_review_at_tracked_run": 35
+  "next_coverage_review_at_tracked_run": 42
 }
