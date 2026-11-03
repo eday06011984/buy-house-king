@@ -818,6 +818,29 @@
         "next_priority": "依輪替回到首次買房；先檢查既有文章是否有可驗證的讀者問題或法規更新，來源不足或意圖重複時改為深化舊文",
         "next_review_at_tracked_run": 42
       }
+    },
+    {
+      "date": "2026-11-03",
+      "topic": "首次買房",
+      "new_article": "/home-buying-contract-cancellation/",
+      "published_date": "2026-11-03",
+      "changes": [
+        "新增買房簽約後反悔指南，區分出價未成交、斡旋轉定與正式成屋契約三個階段",
+        "依民法第248、249條整理定金履行、買方可歸責、賣方可歸責及雙方不可歸責時的不同效果",
+        "依現行成屋契約釐清買方付款遲延的催告程序與房地總價15%違約金上限，不把上限誤寫為固定罰款",
+        "實質補強成屋簽約清單，明確區分簽約前5日審閱期與簽約後解除權並建立雙向內部連結",
+        "保留Google驗證、QA排除、Worker、D1、公開權限與既有網址；更新首頁、Article/Breadcrumb、canonical與sitemap；重新查核青安3.0"
+      ],
+      "sources_checked_on": "2026-11-03",
+      "performance_data_available": true,
+      "performance_data_note": "D1 daily_pageviews仍僅可讀到2026-10-23首頁1次與2026-10-26仲介費文章1次，共2次已記錄頁面瀏覽；這是彙總pageviews，不是訪客數，缺少資料的日期不能當成零。GSC Wizard網站清單查詢仍回傳INVALID_ARGUMENT，沒有可驗證的Search Console曝光、點擊、CTR、排名或索引資料。",
+      "source_versions": {
+        "civil_code_articles_248_249": "checked_2026-11-03",
+        "existing_house_contract_current_effective": "2026-04-01_checked_2026-11-03",
+        "consumer_protection_distance_transaction": "checked_2026-11-03",
+        "moi_deposit_refund_faq": "checked_2026-11-03",
+        "nta_qing_an_3_0": "checked_2026-11-03"
+      }
     }
   ],
   "review_every_runs": 7,
