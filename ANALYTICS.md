@@ -2,6 +2,13 @@
 
 Added 2026-10-12. This is pageview counting, never a count of people, visits, or unique browsers. No historic values are reconstructed.
 
+## 2026-11-10 authorized browser count extension
+
+The owner requested filling browser identifier gaps. From this release, optional `browser_day` and `browser_id` fields carry a per-site random 128-bit token rotated each Taiwan day. localStorage retains only the current day/token and updates on next visit; no Cookie, IP, fingerprint or cross-site key is used. `daily_browsers` stores only day/token, never page linkage. `daily_collection` tracks identified/unidentified PV coverage. A rejected storage operation or stale day preserves PV but not an ID; malformed tokens are rejected. Reported IDs are never people or seven-day unique visitors. Existing pre-release PV lacks identifiers and is not backfilled. All new tables follow the same 90-day lazy cleanup as PV.
+
+The following original design description applies to the pre-2026-11-10 collector; the extension above supersedes its no-ID fields and exact `{path}` payload. QA/privacy gates continue to apply before token generation.
+
+
 ## What is saved
 
 D1 `daily_pageviews` has exactly three columns: Taiwan calendar `day` (Asia/Taipei), an allowlisted canonical public `path`, and an integer `views`. `(day,path)` is the primary key. Each accepted request atomically increments one daily page aggregate; no individual events, visitor IDs, cookies, visitor browser storage, IPs, user agents, referrers, full URLs, or query strings are stored by this code. Hosting infrastructure can retain its own necessary operational records.

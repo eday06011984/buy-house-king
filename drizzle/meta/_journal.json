@@ -8,6 +8,13 @@
       "when": 1791803758190,
       "tag": "0000_whole_giant_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794272070201,
+      "tag": "0001_adorable_doctor_spectrum",
+      "breakpoints": true
     }
   ]
 }

@@ -1,4 +1,4 @@
-/* No analytics identifiers or individual event records. sessionStorage holds only an optional QA exclusion preference. */
+/* Daily, first-party random browser identifiers; never IPs or cross-site IDs. */
 (() => {
   'use strict';
   const qaExcluded = () => {
@@ -16,6 +16,21 @@
       bot.test(navigator.userAgent || '') ||
       new URLSearchParams(location.search).get('no_track') === '1' ||
       location.origin !== 'https://buy-house-king.eday06011984.chatgpt.site') return;
+  const browserToken = () => {
+    try {
+      const day = new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
+      const key = 'house_daily_browser_v1';
+      let saved;
+      try { saved = JSON.parse(window.localStorage.getItem(key)); } catch {}
+      if (!saved || saved.day !== day || !/^[a-f0-9]{32}$/.test(saved.id)) {
+        const bytes = new Uint8Array(16); crypto.getRandomValues(bytes);
+        saved = {day, id: Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('')};
+        window.localStorage.setItem(key, JSON.stringify(saved));
+      }
+      if (window.localStorage.getItem(key) !== JSON.stringify(saved)) return {};
+      return {browser_day: saved.day, browser_id: saved.id};
+    } catch { return {}; }
+  };
   let sent = false;
   const send = () => {
     if (qaExcluded() || sent || document.visibilityState !== 'visible' || document.prerendering) return;
@@ -30,7 +45,7 @@
       method: 'POST', mode: 'same-origin', credentials: 'omit',
       referrerPolicy: 'no-referrer', keepalive: true,
       headers: { 'Content-Type': 'application/json', 'X-Pageview': '1' },
-      body: JSON.stringify({ path: page.pathname })
+      body: JSON.stringify({ path: page.pathname, ...browserToken() })
     }).catch(() => {});
   };
   document.addEventListener('visibilitychange', send);

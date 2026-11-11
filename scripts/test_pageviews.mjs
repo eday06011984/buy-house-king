@@ -116,13 +116,44 @@ test('delayed visibility is rechecked against current tab QA preference',()=>{
 
 test('no-write health check reads the live table and does not fabricate a view',async()=>{
  let reads=0,writes=0;
- const DB={prepare(sql){assert.equal(sql,'SELECT 1 FROM daily_pageviews LIMIT 1');return {all:async()=>{reads++;return {results:[]}}}},batch:async()=>{writes++}};
+ const DB={prepare(sql){assert.match(sql,/^SELECT 1 FROM daily_(pageviews|browsers|collection) LIMIT 1$/);return {all:async()=>{reads++;return {results:[]}}}},batch:async()=>{writes++}};
  const result=await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{DB});
- assert.equal(result.status,204);assert.equal(result.headers.get('x-collector-check'),'database-read-ok');assert.equal(reads,1);assert.equal(writes,0);
+ assert.equal(result.status,204);assert.equal(result.headers.get('x-collector-check'),'database-read-ok');assert.equal(reads,3);assert.equal(writes,0);
  assert.equal((await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{})).status,503);
  assert.equal((await worker.fetch(request('/',{headers:{'X-Site-QA':'health'}}),{DB:{prepare(){throw Error('offline')}}})).status,503);
 });
 test('empty report UI does not imply zero visitors',()=>{
  const html=readFileSync(new URL('../worker/stats.html',import.meta.url),'utf8');
  assert.match(html,/無法判定（期間沒有紀錄，不代表零訪客）/);assert.match(html,/data.rows.length\?/);
+});
+
+test('daily browser identity accepted only in constrained daily form',async()=>{
+ const today=dateWindow().day; const id='a'.repeat(32);const DB=fakeDB();
+ assert.equal((await worker.fetch(request('/',{body:JSON.stringify({path:'/',browser_id:id,browser_day:today})}),{DB})).status,204);
+ const writes=DB.batches[0];assert.equal(writes.length,6);assert.deepEqual(writes[5].values,[today,id]);assert.deepEqual(writes[4].values,[today,1,0]);
+ for(const bad of [{browser_id:'email@example.com',browser_day:today},{browser_id:id},{browser_day:today}])assert.equal((await worker.fetch(request('/',{body:JSON.stringify({path:'/',...bad})}),{DB:fakeDB()})).status,400);
+ const stale=fakeDB();assert.equal((await worker.fetch(request('/',{body:JSON.stringify({path:'/',browser_id:id,browser_day:'2020-01-01'})}),{DB:stale})).status,204);
+ assert.equal(stale.batches[0].length,5);assert.deepEqual(stale.batches[0][4].values,[today,0,1]);
+});
+test('identity generation is daily, first-party, and suppressed under privacy and QA',()=>{
+ const mem=new Map();let rng=0;const storage={getItem:k=>mem.get(k)??null,setItem:(k,v)=>mem.set(k,v)};
+ function run({day='2026-11-10',qa='',gpc=false}={}){
+  const calls=[];const now=Date.parse(day+'T00:00:00+08:00');class Clock extends Date{static now(){return now}}
+  vm.runInNewContext(readFileSync(new URL('../worker/pageview.js',import.meta.url),'utf8'),{Date:Clock,Uint8Array,crypto:{getRandomValues(a){a.fill(++rng);return a}},window:{localStorage:storage},navigator:{globalPrivacyControl:gpc},document:{visibilityState:'visible',querySelector:()=>({href:origin+'/'}),addEventListener(){},removeEventListener(){}},location:{origin,search:qa},URL,URLSearchParams,fetch:(u,o)=>{calls.push(JSON.parse(o.body));return Promise.resolve()}});return calls;
+ }
+ const a=run()[0],b=run()[0],c=run({day:'2026-11-11'})[0];assert.equal(a.browser_id,b.browser_id);assert.notEqual(a.browser_id,c.browser_id);assert.equal(c.browser_day,'2026-11-11');assert.equal(mem.size,1);
+ const old=rng;assert.equal(run({qa:'?site_qa=1'}).length,0);assert.equal(run({gpc:true}).length,0);assert.equal(rng,old);
+});
+test('new schema deduplicates only within a day and preserves legacy rows',()=>{
+ const py=String.raw`
+import sqlite3,pathlib
+con=sqlite3.connect(':memory:')
+for f in sorted(pathlib.Path('drizzle').glob('*.sql')):con.executescript(f.read_text())
+con.execute("INSERT INTO daily_pageviews VALUES('2026-10-23','/',1)")
+for d in ['2026-11-10','2026-11-10','2026-11-11']:con.execute('INSERT OR IGNORE INTO daily_browsers VALUES(?,?)',(d,'a'*32))
+assert con.execute('SELECT COUNT(*) FROM daily_browsers').fetchone()[0]==2
+assert con.execute('SELECT views FROM daily_pageviews').fetchone()[0]==1
+assert con.execute('SELECT COUNT(*) FROM daily_collection').fetchone()[0]==0
+`;
+ const r=spawnSync('python3',['-c',py],{encoding:'utf8'});assert.equal(r.status,0,r.stderr);
 });
